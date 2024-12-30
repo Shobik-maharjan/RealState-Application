@@ -402,7 +402,7 @@ function Blog() {
     const realbtn1=['Painting','Cleaning','AC Services','Electrician Services','Home & Garden','Pest Control']
     const realbtn2=['Renovation','Vastu Tips','Celebrity Homes']
     const realbtn3=['Home Loan','Cash Loan']
-    const realbtn4=['Mumbai','Pune','Hyderabad','Bangalore','Chennai','Delhi']
+    const realbtn4=['Kathmandu', 'Bhaktapur', 'Lalitpur', 'Pokhara', 'Chitwan', 'Gorkha']
     const realbtn5=['Home & Garden','Commercial Loan','NoBroker News','Property Sellers Guide','Property Buyers Guide','Property Rental Guide','Celebrity Homes']
 
 
@@ -1095,7 +1095,7 @@ function Blog() {
                     </div>
                 ))}
                 </div>
-                <div className={selectedCategory4 === 'Mumbai' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Kathmandu' ? '' : 'd-none'}>
                 <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {mumbaiBlogs.map((a)=>(
                   <SwiperSlide>
@@ -1122,7 +1122,7 @@ function Blog() {
                 ))}
                 </Swiper>
                 </div>
-                <div className={selectedCategory4 === 'Pune' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Bhaktapur' ? '' : 'd-none'}>
                   <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {puneBlogs.map((a)=>(
                   <SwiperSlide>
@@ -1149,7 +1149,7 @@ function Blog() {
                 ))}
                 </Swiper>
                 </div>
-                <div className={selectedCategory4 === 'Hyderabad' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Lalitpur' ? '' : 'd-none'}>
                 <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {hyderabadBlogs.map((a)=>(
                   <SwiperSlide>
@@ -1176,7 +1176,7 @@ function Blog() {
                 ))}
                 </Swiper>
                 </div>
-                <div className={selectedCategory4 === 'Bangalore' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Pokhara' ? '' : 'd-none'}>
                 <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {bangaloreBlogs.map((a)=>(
                   <SwiperSlide>
@@ -1203,7 +1203,7 @@ function Blog() {
                 ))}
                 </Swiper>
                 </div>
-                <div className={selectedCategory4 === 'Chennai' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Chitwan' ? '' : 'd-none'}>
                 <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {chennaiBlogs.map((a)=>(
                   <SwiperSlide>
@@ -1230,7 +1230,7 @@ function Blog() {
                 ))}
                 </Swiper>
                 </div>
-                <div className={selectedCategory4 === 'Delhi' ? '' : 'd-none'}>
+                <div className={selectedCategory4 === 'Gorkha' ? '' : 'd-none'}>
                 <Swiper navigation={true} slidesPerView={3} modules={[Navigation]} className="mySwiper">
                   {delhiBlogs.map((a)=>(
                   <SwiperSlide>
