@@ -1,0 +1,260 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+}
+
+.top{
+    background: url('https://www.nobroker.in/blog/wp-content/uploads/2024/09/Rectangle-88.webp');
+    height: 85vh;
+}
+
+.top-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.top-des{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.btn-top-1{
+    color: white;
+    background: rgb(65,147,135);
+    padding: 12px 36px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn-top-2{
+    border-radius: 8px;
+    padding: 12px 36px;
+    border: 1px solid #419387;
+    cursor: pointer;
+    color: #419387;
+    background: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.slide-image {
+    width: 128px;
+    height: 64px;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important; /* Ensure linear transition for smoothness */
+}
+
+.top-second{
+    margin-top: 43vh;
+}
+
+.top-second h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.first{
+    margin-top: 60px;
+}
+
+.first-btn {
+    color: rgb(144, 128, 128);
+    border: 1px solid rgb(211, 211, 211);
+    padding: 10px 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.first-btn.active {
+    color: white;
+    background-color: rgb(47, 47, 47);
+    border: 1px solid rgb(47, 47, 47);
+    z-index: 1;
+}
+
+.first-btn-pos-1{
+    position: absolute;
+    left: 30%;
+}
+
+.first-btn-pos-2{
+    position: absolute;
+    left: 50%;
+}
+
+.first-content{
+    margin-top: 100px;
+    padding: 0;
+    border: 1px solid #888;
+    border-radius: 15px;
+}
+
+.first-img{
+    width: 100%;
+    height: 150px;
+    background: url('https://www.nobroker.in/blog/wp-content/uploads/2024/09/rectangle_75-scaled.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first-img h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.employees-card{
+    width: 260px;
+    height: 172px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.employees-card img{
+    width: 100%;
+    height: 116px;
+    object-fit: cover;
+}
+
+.employees-card p{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+}
+
+.btn-modal{
+    background: rgb(65,147,135);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+.form-control{
+    border-radius: 5px !important;
+}
+
+.modal-body h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-body p{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.second-content{
+    margin-top: 100px;
+    padding: 0;
+    border: 1px solid #888;
+    border-radius: 15px;
+}
+
+.second-img{
+    width: 100%;
+    height: 150px;
+    background: url('https://www.nobroker.in/blog/wp-content/uploads/2024/09/rectangle_75-1-scaled.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second-img h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box{
+    width: 100%;
+    height: 281px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+}
+
+.circle{
+    padding: 12px 20px;
+    gap: 10px;
+    position: absolute;
+    left: -14px;
+    top: -14px;
+    border-radius: 50%;
+    background: #181c51;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.worksimg{
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+}
+
+.box h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+}
+
+.box p{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(136, 136, 136);
+}
+
+.road {
+    background-color: rgb(24,28,81);
+    height: 30px; 
+    width: 100%;
+    position: relative;
+}
+
+.lane {
+    width: 100%;
+    height: 4px;
+    background-image: repeating-linear-gradient(
+        to right,
+        white 0,
+        white 20px,
+        transparent 20px,
+        transparent 40px
+    );
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.btn-success-cus{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,149,135);
+    padding: 16px 28px;
+    border-radius: 8px;
+}

@@ -658,11 +658,11 @@ function Navb() {
                   </Dropdown.Item>
 
                   <Dropdown.Item
-                    href="/"
+                    href="/corporate-enquiry"
                     className="menu-dropdown text-decoration-none"
                   >
                     <Link
-                      to="/"
+                      to="/corporate-enquiry"
                       className="menu-dropdown text-decoration-none"
                       style={{ fontSize: "normal" }}
                     >
