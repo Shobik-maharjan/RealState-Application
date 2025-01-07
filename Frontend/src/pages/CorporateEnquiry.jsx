@@ -411,7 +411,7 @@ function CorporateEnquiry() {
       <div className="container">
         <div className="text-center mb-4">
           <h3 style={{fontSize:'20px',fontWeight:'800'}}>Loved what you saw?</h3>
-          <p style={{fontSize:'20px',fontWeight:'400'}}>It’s time to get started!</p>
+          <p style={{fontSize:'14px',fontWeight:'400'}}>It’s time to get started!</p>
         </div>
         <form>
           <div className="row g-3 d-flex justify-content-center mb-10">

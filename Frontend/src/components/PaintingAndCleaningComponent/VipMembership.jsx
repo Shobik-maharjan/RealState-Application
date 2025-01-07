@@ -95,9 +95,9 @@ const VipMembership = ({ title, titlePosition }) => {
               <div className="text-white mt-20">
                 <div className="opacity-80">VIP MEMBERSHIP</div>
                 <div className="flex justify-between items-center">
-                  <div className="text-2xl font-semibold">₹199</div>
+                  <div className="text-2xl font-semibold">रु199</div>
                   <div className="opacity-40">
-                    <strike> ₹599 </strike>for 6 months
+                    <strike> रु599 </strike>for 6 months
                   </div>
                 </div>
               </div>

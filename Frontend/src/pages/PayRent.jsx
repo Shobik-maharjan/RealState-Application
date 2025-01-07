@@ -172,7 +172,7 @@ const PayRent = () => {
         <div className="md:w-4/12 w-11/12 px-6 py-8 border-2 bg-slate-50 border-[#004958] flex gap-3 items-center">
           <img src={bulb} alt="bulb" className="w-8 h-8" />
           <h3 className="text-base">
-            You can earn up to ₹30,000* by just paying rent for a year by using
+            You can earn up to रु30,000* by just paying rent for a year by using
             your credit card
           </h3>
         </div>

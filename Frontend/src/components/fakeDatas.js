@@ -26,14 +26,14 @@ export const services = [
   {
     img: instaCash,
     name: "NB InstaCash",
-    des: "Get Instant Cash Upto ₹10 Lakhs",
+    des: "Get Instant Cash Upto रु10 Lakhs",
     link: "https://www.NESTATE.in/instacash/landing?isHybrid=true&hybridActionBar=false&nbFr=rent_page_desktop",
     linkName: "Withdraw Now",
   },
   // {
   //   img: dhamaka,
   //   name: "CashBack Dhamaka",
-  //   des: "It's raining cashback! Every 100th user gets ₹100 or ₹1000 cashback",
+  //   des: "It's raining cashback! Every 100th user gets रु100 or रु1000 cashback",
   //   link: "",
   //   linkName: "View winners",
   // },
@@ -53,14 +53,14 @@ export const services = [
   },
   {
     img: credit_card,
-    name: "Earn upto ₹30,000/- in Rewards",
+    name: "Earn upto रु30,000/- in Rewards",
     des: "Earn miles and reward points on your Visa and Mastercard cards plus enjoy upto 45 days interest free credit period.",
     link: "",
     linkName: "",
   },
   {
     img: no_hidden_cost,
-    name: "Earn upto ₹30,000/- in Rewards",
+    name: "Earn upto रु30,000/- in Rewards",
     des: "Earn miles, get cash back and reward points on every property payment with your card.",
     link: "",
     linkName: "",
@@ -105,7 +105,7 @@ export const services = [
 export const offers = [
   {
     img: logo,
-    title: "Flat ₹100 off on Gift Vouchers on Rent Payment",
+    title: "Flat रु100 off on Gift Vouchers on Rent Payment",
     link: "",
   },
   {
@@ -116,7 +116,7 @@ export const offers = [
   {
     img: dhamaka,
     title:
-      "It's raining cashback! Every 100th user gets ₹100 or ₹1000 cashback",
+      "It's raining cashback! Every 100th user gets रु100 or रु1000 cashback",
     link: "",
   },
   {

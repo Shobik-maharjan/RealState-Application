@@ -215,19 +215,19 @@ const PackersAndMovers = () => {
       id: 1,
       image: "packersAndMovers/propertyLegalService.webp",
       title: "Property Legal Services",
-      price: "Starting @₹2999",
+      price: "Starting @रु2999",
     },
     {
       id: 2,
       image: "packersAndMovers/rentalAgreement.webp",
       title: "Rental Agreement",
-      price: "Starting @₹249",
+      price: "Starting @रु249",
     },
     {
       id: 3,
       image: "packersAndMovers/TenantVerification.webp",
       title: "Tenant Verification",
-      price: "Starting @₹99",
+      price: "Starting @रु99",
     },
   ];
 

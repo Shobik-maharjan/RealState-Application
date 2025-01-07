@@ -15,13 +15,13 @@ const HomeService = () => {
   const services = [
     { icon: "", title: "home cleaning", link: "", offer: "Upto 60% off*" },
     { icon: "", title: "packers & movers", link: "", offer: "lowest quote*" },
-    { icon: "", title: "city tempo", link: "", offer: "Starts @ ₹210" },
+    { icon: "", title: "city tempo", link: "", offer: "Starts @ रु210" },
     { icon: "", title: "painting", link: "", offer: "flat 25% off" },
     { icon: "", title: "plumbing", link: "", offer: "" },
     { icon: "", title: "electrician", link: "", offer: "" },
     { icon: "", title: "carpentry", link: "", offer: "" },
-    { icon: "", title: "weekly cleaning", link: "", offer: "₹ 180/service" },
-    { icon: "", title: "bathroom cleaning", link: "", offer: "Starts @ ₹359" },
+    { icon: "", title: "weekly cleaning", link: "", offer: "रु 180/service" },
+    { icon: "", title: "bathroom cleaning", link: "", offer: "Starts @ रु359" },
     { icon: "", title: "home interiors", link: "", offer: "" },
     { icon: "", title: "home renivation", link: "", offer: "" },
     { icon: "", title: "one wall painting", link: "", offer: "Flat 25% Off" },
@@ -214,7 +214,7 @@ const HomeService = () => {
               <h1 className="text-2xl capitalize font-bold text-zinc-700">
                 home repairs
               </h1>
-              <h3 className="text-sm">Starting @ ₹99</h3>
+              <h3 className="text-sm">Starting @ रु99</h3>
             </div>
           </div>
         </div>
@@ -278,7 +278,7 @@ const HomeService = () => {
                 tempo services
               </h1>
               <h3 className="text-sm">
-                Move Anything, Anywhere within City @ ₹449
+                Move Anything, Anywhere within City @ रु449
               </h3>
             </div>
           </div>

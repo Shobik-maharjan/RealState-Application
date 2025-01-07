@@ -201,10 +201,10 @@ const Search = ({ selectedOption, setSelectedOption }) => {
                   45-Days Guarantee
                 </>
               ) : (
-                <>
+                <Link to="rental-agreement" className="flex items-center">
                   <img src="	home/deliveryIcon.svg" alt="" className="mr-2" />
                   Next Day Delivery
-                </>
+                  </Link>
               )}
             </div>
           </div>

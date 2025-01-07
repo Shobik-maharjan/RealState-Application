@@ -15,19 +15,19 @@ const RentalAgreement = () => {
       id: 1,
       text: "Rental Agreement + Police Intimation",
       bgImage: "rentalAgreement/pkgWithRaUpload.webp",
-      offer: "Upto ₹100 off",
+      offer: "Upto रु100 off",
     },
     {
       id: 2,
       text: "Rental Agreement with Biometric",
       bgImage: "rentalAgreement/pkgWithRaMh.webp",
-      offer: "Upto ₹100 off",
+      offer: "Upto रु100 off",
     },
     {
       id: 3,
       text: "Rental Agreement with E-Stamp & Notary",
       bgImage: "rentalAgreement/pkgWithEstamp.webp",
-      offer: "Upto ₹100 off",
+      offer: "Upto रु100 off",
     },
   ];
 
@@ -102,7 +102,7 @@ const RentalAgreement = () => {
         2: "Upload agreement with your own clauses",
         3: "Hardcopy Delivery with Same Day Delivery",
         4: "Agreement Delivery available for both Tenant/ Owner",
-        5: "Starting @ ₹399 + Stamp Paper",
+        5: "Starting @ रु399 + Stamp Paper",
       },
     },
     {
@@ -113,7 +113,7 @@ const RentalAgreement = () => {
         2: "NESTATE Draft with custom clauses",
         3: "Hardcopy Delivery with Same Day Delivery",
         4: "Agreement Delivery available for both Tenant/Owner",
-        5: "Starting @ ₹399 + Stamp Paper",
+        5: "Starting @ रु399 + Stamp Paper",
       },
     },
     {
@@ -125,7 +125,7 @@ const RentalAgreement = () => {
         3: "Paperless, remote and secure Aadhar eSign",
 
         4: "Get agreement digital copy Instantly, legally valid in court of law",
-        5: "Go paperless and Save ₹100!",
+        5: "Go paperless and Save रु100!",
       },
     },
   ];
@@ -135,19 +135,19 @@ const RentalAgreement = () => {
       id: 1,
       image: "rentalAgreement/nbDiscount.svg",
       disPercent: "10% NB cash discount",
-      upto: "Upto ₹250",
+      upto: "Upto रु250",
     },
     {
       id: 2,
       image: "rentalAgreement/hdfcCoupon.png",
       disPercent: "5% HDFC bank",
-      upto: "Upto ₹1500",
+      upto: "Upto रु1500",
     },
     {
       id: 3,
       image: "rentalAgreement/amazonCoupon.png",
-      disPercent: "₹100 Amazon pay discount",
-      upto: "On spend of ₹2000",
+      disPercent: "रु100 Amazon pay discount",
+      upto: "On spend of रु2000",
     },
   ];
 

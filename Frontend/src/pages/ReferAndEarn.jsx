@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import FrequentAskedQuestion from "../components/FrequentAskedQuestion";
+import { defaultCountries, PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 const ReferAndEarn = () => {
+    const [phone, setPhone] = useState("");
+  
   const review = [
     {
       id: 1,
@@ -44,12 +48,83 @@ const ReferAndEarn = () => {
       ans: "Please bear with us for some time as we are verifying your claim. This will be reviewed and we will get back to you ASAP.",
     },
   ];
+  const cities = [
+    { value: "Sunsari", label: "Sunsari" },
+    { value: "Udayapur", label: "Udayapur" },
+    { value: "Okhaldhunga", label: "Okhaldhunga" },
+    { value: "Solukhumbu", label: "Solukhumbu" },
+    { value: "Khotang", label: "Khotang" },
+    { value: "Dolakha", label: "Dolakha" },
+    { value: "Ramechhap", label: "Ramechhap" },
+    { value: "Rukum", label: "Rukum" },
+    { value: "Dolpa", label: "Dolpa" },
+    { value: "Humla", label: "Humla" },
+    { value: "Mugu", label: "Mugu" },
+    { value: "Jajarkot", label: "Jajarkot" },
+    { value: "Surkhet", label: "Surkhet" },
+    { value: "Dang", label: "Dang" },
+    { value: "Rolpa", label: "Rolpa" },
+    { value: "Pyuthan", label: "Pyuthan" },
+    { value: "Arghakhanchi", label: "Arghakhanchi" },
+    { value: "Syangja", label: "Syangja" },
+    { value: "Lamjung", label: "Lamjung" },
+    { value: "Manang", label: "Manang" },
+    { value: "Mustang", label: "Mustang" },
+    { value: "Kaski", label: "Kaski" },
+    { value: "Saptari", label: "Saptari" },
+    { value: "Bhojpur", label: "Bhojpur" },
+    { value: "Rupandehi", label: "Rupandehi" },
+    { value: "Nawalparasi", label: "Nawalparasi" },
+    { value: "Panchthar", label: "Panchthar" },
+    { value: "Taplejung", label: "Taplejung" },
+    { value: "Illam", label: "Illam" },
+    { value: "Dhankuta", label: "Dhankuta" },
+    { value: "Terhathum", label: "Terhathum" },
+    { value: "Sindhuli", label: "Sindhuli" },
+    { value: "Sankhuwasabha", label: "Sankhuwasabha" },
+    { value: "Chadani", label: "Chadani" },
+    { value: "Bardiya", label: "Bardiya" },
+    { value: "Gorkha", label: "Gorkha" },
+    { value: "Baitadi", label: "Baitadi" },
+    { value: "Rasuwa", label: "Rasuwa" },
+    { value: "Sindhupalchok", label: "Sindhupalchok" },
+    { value: "Chandrapur", label: "Chandrapur" },
+    { value: "Bishal Nagar", label: "Bishal Nagar" },
+    { value: "Chhetrapati", label: "Chhetrapati" },
+    { value: "Pokhara Metropolitan", label: "Pokhara Metropolitan" },
+    { value: "Patan (Lalitpur)", label: "Patan (Lalitpur)" },
+    { value: "Banepa", label: "Banepa" },
+    { value: "Suryabinayak", label: "Suryabinayak" },
+    { value: "Bhadrapur", label: "Bhadrapur" },
+    { value: "Baglung", label: "Baglung" },
+    { value: "Hetauda", label: "Hetauda" },
+    { value: "Purnabas", label: "Purnabas" },
+    { value: "Kalaiya", label: "Kalaiya" },
+    { value: "Shree Harsha", label: "Shree Harsha" },
+    { value: "Kavre", label: "Kavre" },
+    { value: "Tandi", label: "Tandi" },
+    { value: "Panchgani", label: "Panchgani" },
+    { value: "Mahakali", label: "Mahakali" },
+    { value: "Sati", label: "Sati" },
+    { value: "Buddhaneelkantha", label: "Buddhaneelkantha" },
+    { value: "Dharmasthali", label: "Dharmasthali" },
+    { value: "Madi", label: "Madi" },
+    { value: "Madhyapur Thimi", label: "Madhyapur Thimi" },
+    { value: "Bansbari", label: "Bansbari" },
+    { value: "Bharatpur", label: "Bharatpur" },
+    { value: "Kathmandu Valley", label: "Kathmandu Valley" },
+    { value: "Gaur", label: "Gaur" },
+    { value: "Jaleshwor", label: "Jaleshwor" },
+    { value: "Kirtipur", label: "Kirtipur" },
+    { value: "Chuchchech", label: "Chuchchech" },
+    { value: "Brahmapuri", label: "Brahmapuri" },
+  ];
   return (
-    <div>
+    <div id="top" >
       <div className="bg-[url(referAndEarn/clickAndEarnbanner.svg)] md:h-72 h-20 w-full bg-no-repeat bg-contain"></div>
       <div className="text-center md:text-3xl opacity-90 font-extralight md:py-8 py-4">
         <p className="text-sm md:text-3xl">
-          Click a Pic or Refer owner details to <b>earn upto ₹120 </b>for
+          Click a Pic or Refer owner details to <b>earn upto रु120 </b>for
         </p>
         <p>every property listing we publish.</p>
       </div>
@@ -67,11 +142,96 @@ const ReferAndEarn = () => {
           <div className="md:text-xl text-sm md:font-extralight font-medium w-4/6 md:w-full mx-auto my-5 md:mb-24">
             Share contact details of the property owner and get rewarded
           </div>
-          <button className="p-3 bg-[#004958] text-white">
+          <button className="p-3 bg-[#004958] text-white" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Enter Owner Details
           </button>
         </div>
       </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Refer & Earn</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <h4 className="" style={{fontSize:'16px', fontWeight:'600',color:'rgb(70, 70, 70)'}}>
+          Provide Owner Contact & Get up to रु120 in your account directly
+        </h4>
+        <p className="" style={{fontSize:'14px', fontWeight:'400',color:'rgb(70, 70, 70)'}}>
+          Please enter correct owner's name & phone to ensure faster response
+          from us.
+        </p>
+        <form>
+          <div className="mb-3">
+            <select
+              name="city"
+              className="form-select"
+            >
+              <option value="">Select City</option>
+              {cities.map((a)=>(
+                    <option value={a.value}>{a.label}</option>
+                ))}
+            </select>
+          </div>
+
+          <div className="input-group mb-3">
+          <PhoneInput
+                          defaultCountry="np"
+                          value={phone}
+                          onChange={(phone) => setPhone(phone)}
+                          inputStyle={{ width: "440px", borderRadius:'10px' }}
+                        />
+          </div>
+
+          <div className="mb-3">
+            <input
+              type="text"
+              name="ownerName"
+              className="form-control"
+              placeholder="Owner Name"
+            />
+          </div>
+
+          <div className="mb-3">
+            <select
+              name="propertyType"
+              className="form-select"
+            >
+              <option value="">Select Property Type</option>
+              <option value="Rent">Rent</option>
+              <option value="PG">PG</option>
+              <option value="Resale">Resale</option>
+              <option value="Land/Plot">Land/Plot</option>
+              <option value="Commerical Rent">Commerical Rent</option>
+              <option value="Commerical Resale">Commerical Resale</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
+            <textarea
+              name="moreInfo"
+              className="form-control"
+              placeholder="Tell us more"
+              rows="3"
+            ></textarea>
+          </div>
+
+          
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+      <div className="d-grid w-100">
+            <button type="submit" className="btn btn-danger">
+              Send Details
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div className="flex md:flex-row flex-col-reverse md:py-8 py-4 justify-around  text-sm md:text-2xl bg-[#f9f9f9] items-center text- md:text-left">
         <div>
@@ -87,9 +247,57 @@ const ReferAndEarn = () => {
             </p>
           </div>
           <div className="flex md:block justify-center gap-4">
-            <button className="bg-[#004958] text-white font-bold text-sm px-4 py-3 rounded-sm hover:bg-teal-700">
+            <button className="bg-[#004958] text-white font-bold text-sm px-4 py-3 rounded-sm hover:bg-teal-700" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">
               Upload Photo
             </button>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Refer & Earn</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <p className=" text-muted" style={{fontSize:'16px', fontWeight:'600',color:'rgb(70, 70, 70)'}}>
+              Upload a picture of TO-LET board outside any house & Get रु120 in
+              your Paytm/UPI Wallet
+            </p>
+            <p className=" text-muted" style={{fontSize:'14px', fontWeight:'400',color:'rgb(70, 70, 70)'}}>
+              Please enter locality to ensure faster response from us.
+            </p>
+            <form >
+              <div className="mb-3">
+                <select
+                  name="city"
+                  className="form-select"
+                >
+                  <option value="">Select City</option>
+                  {cities.map((a)=>(
+                    <option value={a.value}>{a.label}</option>
+                ))}
+                </select>
+              </div>
+              <div className="mb-3">
+                <input
+                  type="file"
+                  className="form-control"
+                  id="imageUpload"
+                  placeholder="Upload Image"
+                />
+              </div>
+              
+            </form>
+      </div>
+      <div class="modal-footer">
+      <div className="d-grid w-100">
+                <button type="submit" className="btn btn-danger">
+                  Submit
+                </button>
+              </div>
+      </div>
+    </div>
+  </div>
+</div>
             <button className="bg-[#004958] text-white font-bold text-sm px-4 py-3 rounded-sm hover:bg-teal-700 md:hidden">
               Take Photo
             </button>
@@ -127,9 +335,11 @@ const ReferAndEarn = () => {
                   What will <span className="font-semibold">You </span>do with
                   all that extra money ?
                 </p>
+                <a href="#top">
                 <button className="bg-[#004958] text-white md:font-bold text-sm px-4 py-3 rounded-sm hover:bg-teal-700 min-w-fit">
                   I'm In
                 </button>
+                </a>
               </div>
             </div>
           </div>

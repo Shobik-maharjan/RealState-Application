@@ -11,9 +11,9 @@ const Subscription = () => {
   const cards = [
     {
       title: "Freedom Plan",
-      price: "₹ 2,899",
-      gst_price: "₹ 521.82",
-      payable: "₹ 3,420.82",
+      price: "रु 2,899",
+      gst_price: "रु 521.82",
+      payable: "रु 3,420.82",
       gst: "+18% GST",
       description: "Get genuine house owner contacts matching your requirements",
       description1: "Complete Relocation Assistance on Call",
@@ -39,10 +39,10 @@ const Subscription = () => {
     },
     {
       title: "Relax Plan",
-      price: "₹ 2,999",
+      price: "रु 2,999",
       gst: "+18% GST",
-      gst_price: "₹ 539.82",
-      payable: "₹ 3,438.82",
+      gst_price: "रु 539.82",
+      payable: "रु 3,438.82",
       description:
         "Get Relationship Manager to help you SAVE time and money",
       description1: "Dedicated Property Expert",
@@ -70,10 +70,10 @@ const Subscription = () => {
     },
     {
       title: "MoneyBack Plan",
-      price: "₹ 4,999",
+      price: "रु 4,999",
       gst: "+18% GST",
-      gst_price: "₹ 899.82",
-      payable: "₹ 5,898.82",
+      gst_price: "रु 899.82",
+      payable: "रु 5,898.82",
       description: "Get Guaranteed home or 100% Refund",
       description1: "Dedicated Property Expert",
       features1: [
@@ -117,7 +117,7 @@ const Subscription = () => {
               >
                 <h3>{card.title}</h3>
                 <h4 className="d-flex">
-                <div class="line-through">₹ 1,999</div>
+                <div class="line-through">रु 1,999</div>
                 <div>
                   <div>{card.price}</div>
                   <div className="gst-hover" style={{cursor:"pointer"}}>

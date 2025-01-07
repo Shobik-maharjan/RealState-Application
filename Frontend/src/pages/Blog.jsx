@@ -1031,11 +1031,11 @@ function Blog() {
                     <div className="col-lg-4">
                       <div className='position-relative mb-5' style={{background:`url('https://www.nobroker.in/blog/wp-content/uploads/2023/09/40-LakhHome-Loan-EMI.jpg')`,backgroundSize:'contain',backgroundPosition:'center',width:'100%',height:'180px'}}>
                         <p className='position-absolute bottom-0 p-2 text-light fw-semibold'>
-                        ₹40 Lakh Home Loan EMI With Calculator and Interest Rates in 2025</p>
+                        रु40 Lakh Home Loan EMI With Calculator and Interest Rates in 2025</p>
                       </div>
                       <div className='position-relative mt-5' style={{background:`url('https://www.nobroker.in/blog/wp-content/uploads/2023/09/30-Lakh-Home-Loan-EMI.jpg')`,backgroundSize:'cover',backgroundPosition:'center',width:'100%',height:'180px'}}>
                         <p className='position-absolute bottom-0 p-2 text-light fw-semibold'>
-                        ₹30 Lakh Home Loan EMI With Calculator and Interest Rates in 2025</p>
+                        रु30 Lakh Home Loan EMI With Calculator and Interest Rates in 2025</p>
                       </div>
                     </div>
                     <div className="col-lg-4">

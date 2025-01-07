@@ -283,7 +283,7 @@ const PaintingAndCleaning = () => {
                     className="m-0"
                   />
                 </div>
-                <div className="opacity-50 text-sm">Starting @ ₹99</div>
+                <div className="opacity-50 text-sm">Starting @ रु99</div>
               </div>
             </div>
           </div>
@@ -399,7 +399,7 @@ const PaintingAndCleaning = () => {
                     className="m-0"
                   />
                 </div>
-                <div className="opacity-50 text-sm">Starting @ ₹99</div>
+                <div className="opacity-50 text-sm">Starting @ रु99</div>
               </div>
             </div>
           </div>

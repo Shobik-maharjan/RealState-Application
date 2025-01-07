@@ -484,7 +484,7 @@ const CheckEligibility = ({ selectedOption }) => {
         <div className="p-4">
           <div className="bg-[url(home/instacash-home-banner-new.webp)] bg-cover px-4 pt-4 flex flex-col gap-2 w-full">
             <div className="font-semibold">
-              Get Upto <span className="text-teal-600">₹ 5Lakhs</span>
+              Get Upto <span className="text-teal-600">रु 5Lakhs</span>
             </div>
             <div className="text-xs font-medium">Instant Cash!</div>
             <button className="bg-teal-600 font-semibold text-sm text-white p-2 w-fit rounded-md">
@@ -686,7 +686,7 @@ const CheckEligibility = ({ selectedOption }) => {
                 Your property is expected to have a rent between
               </div>
               <div className="font-medium text-sm">
-                ₹ <span className="blur-sm">34,999</span>₹
+                रु <span className="blur-sm">34,999</span>रु
               </div>
               <div className="text-white bg-teal-600 p-2 w-fit text-xs rounded-md">
                 Know your fair rent

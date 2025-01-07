@@ -13,9 +13,9 @@ function BuyersPlan() {
   const cards = [
     {
       title: "Power Plan",
-      price: "₹ 2,899",
-      gst_price: "₹ 521.82",
-      payable: "₹ 3,420.82",
+      price: "रु 2,899",
+      gst_price: "रु 521.82",
+      payable: "रु 3,420.82",
       gst: "+18% GST",
       description: "Choose your dream home from lots of options!",
       features: [
@@ -35,10 +35,10 @@ function BuyersPlan() {
     },
     {
       title: "Property Expert Plan",
-      price: "₹ 2,999",
+      price: "रु 2,999",
       gst: "+18% GST",
-      gst_price: "₹ 539.82",
-      payable: "₹ 3,438.82",
+      gst_price: "रु 539.82",
+      payable: "रु 3,438.82",
       description:
         "Get FREE Loan Assistance + 100% Cashback on plan amount* + Property Expert",
       description1: "Dedicated Property Expert",
@@ -71,10 +71,10 @@ function BuyersPlan() {
     },
     {
       title: "Property Expert MoneyBack Plan",
-      price: "₹ 4,999",
+      price: "रु 4,999",
       gst: "+18% GST",
-      gst_price: "₹ 899.82",
-      payable: "₹ 5,898.82",
+      gst_price: "रु 899.82",
+      payable: "रु 5,898.82",
       description: "Get Guaranteed property or 100% Refund",
       description1: "Dedicated Property Expert",
       features1: [

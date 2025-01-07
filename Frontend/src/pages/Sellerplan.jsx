@@ -178,7 +178,7 @@ function Sellerplan() {
                     Relax Plan
                   </div>
                   <div className="">
-                    <span style={{ fontSize: "22px" }}>₹7,499 </span>
+                    <span style={{ fontSize: "22px" }}>रु7,499 </span>
                   </div>
                   <div>
                     <span className="smt">
@@ -390,7 +390,7 @@ function Sellerplan() {
                     Relax Plan
                   </div>
                   <div className="">
-                    <span style={{ fontSize: "22px" }}>₹7,499 </span>
+                    <span style={{ fontSize: "22px" }}>रु7,499 </span>
                   </div>
                   <div>
                     <span className="smt">
@@ -595,7 +595,7 @@ function Sellerplan() {
                     Relax Plan
                   </div>
                   <div className="">
-                    <span style={{ fontSize: "22px" }}>₹7,499 </span>
+                    <span style={{ fontSize: "22px" }}>रु7,499 </span>
                   </div>
                   <div>
                     <span className="smt">
@@ -798,7 +798,7 @@ function Sellerplan() {
                     Relax Plan
                   </div>
                   <div className="">
-                    <span style={{ fontSize: "22px" }}>₹7,499 </span>
+                    <span style={{ fontSize: "22px" }}>रु7,499 </span>
                   </div>
                   <div>
                     <span className="smt">
