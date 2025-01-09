@@ -380,7 +380,9 @@ const PaintingAndCleaning = () => {
 
         <InSpotlight />
 
-        <Services title={"Home Repair Services"} />
+        <div className="bg-white md:px-[140px]">
+          <Services title={"Home Repair Services"} />
+        </div>
         <div className="bg-[#004953] py-10 px-4 mb-1.5">
           <div className="md:px-[140px] max-w-[1280px] mx-auto">
             <SecondOffer
@@ -399,7 +401,7 @@ const PaintingAndCleaning = () => {
                     className="m-0"
                   />
                 </div>
-                <div className="opacity-50 text-sm">Starting @ रु99</div>
+                <div className="opacity-50 text-sm">Starting @ Rs.99</div>
               </div>
             </div>
           </div>

@@ -4,9 +4,26 @@ import { RxCross1 } from "react-icons/rx";
 import { defaultCountries, PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import signuphome from "../assets/images/signupHome.png";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const LoginSignup = () => {
-  const [phone, setPhone] = useState("");
+  const { values, errors, touched, handleSubmit, handleChange } = useFormik({
+    initialValues: {
+      phone: "",
+    },
+    validationSchema: Yup.object({
+      phone: Yup.string()
+        .matches(
+          /^[0-9]+$/, // Regex to allow only digits (you can modify for better formats)
+          "Phone number is not valid. Only digits are allowed."
+        )
+        .required("Please enter your number"),
+    }),
+    onsubmit: (values, action) => {
+      console.log(values);
+    },
+  });
 
   return (
     <>
@@ -27,17 +44,21 @@ const LoginSignup = () => {
             </div>
           </div>
           <div className="flex flex-col md:h-auto h-full justify-between p-4 md:p-8 md:mt-4 md:w-7/12">
-            <div className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="mb-0 text-lg font-medium">
                 Enter phone to continue
               </div>
               <div>
                 <PhoneInput
                   defaultCountry="np"
-                  value={phone}
-                  onChange={(phone) => setPhone(phone)}
+                  value={values.phone}
+                  name="phone"
+                  onChange={handleChange}
                   inputStyle={{ width: "100%" }}
                 />
+              </div>
+              <div className="text-red-500">
+                {errors.phone && touched.phone ? errors.phone : null}
               </div>
               <button
                 type="submit"
@@ -45,7 +66,7 @@ const LoginSignup = () => {
               >
                 Continue
               </button>
-            </div>
+            </form>
             <div className="text-center">
               <span className="text-xs">By continuing, you agree to our </span>
               <span className="hover:underline font-bold text-xs cursor-pointer">

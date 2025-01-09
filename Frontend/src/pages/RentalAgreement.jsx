@@ -118,11 +118,11 @@ const RentalAgreement = () => {
     },
     {
       id: 3,
-      heading: "Paperless Rental Agreement with Aadhar E-Sign",
+      heading: "Paperless Rental Agreement with Nagrita E-Sign",
       details: {
         1: "Agreement printed with legal E-Stamp",
         2: "NESTATE Draft with custom clauses",
-        3: "Paperless, remote and secure Aadhar eSign",
+        3: "Paperless, remote and secure Nagrita eSign",
 
         4: "Get agreement digital copy Instantly, legally valid in court of law",
         5: "Go paperless and Save रु100!",
@@ -140,7 +140,7 @@ const RentalAgreement = () => {
     {
       id: 2,
       image: "rentalAgreement/hdfcCoupon.png",
-      disPercent: "5% HDFC bank",
+      disPercent: "5% Nepal bank",
       upto: "Upto रु1500",
     },
     {
@@ -199,11 +199,11 @@ const RentalAgreement = () => {
     {
       id: 3,
       que: "Landlord and tenant are in different locations?",
-      ans: "You can use the Aadhar eSign based digital signature service.",
+      ans: "You can use the Nagrita eSign based digital signature service.",
     },
     {
       id: 4,
-      que: "Is Aadhar e-sign valid?",
+      que: "Is Nagrita e-sign valid?",
       ans: "Yes, Aadhaar eSign based digital signatures are a legally accepted and secure manner of electronically signing documents, under effect of Gazette Notification No. 2015 Jan -GSR 61(E) Electronic Signature or Electronic Authentication Technique and Procedure Rules, 2015.",
     },
     {
@@ -218,14 +218,18 @@ const RentalAgreement = () => {
   const [addOnsModelOpen, setAddOnsModelOpen] = useState(null);
   const [legalServiceMouseEnter, setLegalServiceMouseEnter] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedReviews, setExpandedReviews] = useState(
+    customerReviews.map(() => false) // Initialize each review as not expanded
+  );
+  const toggleReview = (index) => {
+    setExpandedReviews((prevState) =>
+      prevState.map((expanded, i) => (i === index ? !expanded : expanded))
+    );
+  };
 
   const toggleClickAddOn = (id) => {
     setClickAddOns(clickAddOns === id ? null : id);
     setAddOnsModelOpen(!addOnsModelOpen);
-  };
-
-  const toggleReview = () => {
-    setIsExpanded(!isExpanded);
   };
 
   const toggleLegalServiceMouseEnter = (index) => {
@@ -240,10 +244,10 @@ const RentalAgreement = () => {
           <div className="text-white">
             <div className="w-[92%] mx-auto py-10">
               <div className="text-3xl mb-2">
-                Online Rent Agreement in Mumbai
+                Online Rent Agreement in Kathmandu
               </div>
               <span className="opacity-70 text-xs d-flex align-items-center gap-1">
-                Now available in 150+ cities in india
+                Now available in 150+ cities in Nepal
                 <img
                   src="rentalAgreement/legalPageCity.gif"
                   className="gif-image"
@@ -355,7 +359,7 @@ const RentalAgreement = () => {
           <div className="md:flex hidden justify-center gap-2 text-xs">
             <div className="flex items-center gap-2">
               <PiStamp className="text-3xl text-[#ff5800]" />
-              <div className="opacity-80">Mahrashtra Govt. Registered</div>
+              <div className="opacity-80">Nepal Govt. Registered</div>
               <div className="h-[80%] border border-black/40"></div>
             </div>
             <div className="flex items-center gap-2">
@@ -684,30 +688,31 @@ const RentalAgreement = () => {
               </div>
             </div>
             <div className="flex gap-4 mt-10 overflow-x-auto no-scrollbar">
-              {[...customerReviews, ...customerReviews, ...customerReviews].map(
-                (item, index) => (
-                  <div
-                    key={index}
-                    className="min-w-80 border border-zinc-300 mb-4 shadow-md rounded-xl p-6"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="px-3 py-2.5 bg-green-300 rounded-full">
-                        {item.profile}
-                      </div>
-                      <div className="font-medium">{item.name}</div>
-                      <img src="rentalAgreement/verifiedImg.svg" alt="" />
+              {[...customerReviews, ...customerReviews].map((item, index) => (
+                <div
+                  key={index}
+                  className="min-w-80 border h-fit border-zinc-300 mb-4 shadow-md rounded-xl p-6"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="px-3 py-2.5 bg-green-300 rounded-full">
+                      {item.profile}
                     </div>
-                    <div className="text-sm">
-                      {isExpanded
-                        ? item.review
-                        : item.review.slice(0, 150) + " ... "}
-                      <span onClick={toggleReview} className="text-teal-500">
-                        {isExpanded ? "see less" : "see more"}
-                      </span>
-                    </div>
+                    <div className="font-medium">{item.name}</div>
+                    <img src="rentalAgreement/verifiedImg.svg" alt="" />
                   </div>
-                )
-              )}
+                  <div className="text-sm">
+                    {expandedReviews[index]
+                      ? item.review
+                      : item.review.slice(0, 150) + " ... "}
+                    <span
+                      onClick={() => toggleReview(index)}
+                      className="text-teal-500 cursor-pointer"
+                    >
+                      {expandedReviews[index] ? "see less" : "see more"}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div></div>
@@ -724,27 +729,27 @@ const RentalAgreement = () => {
           {/* final text */}
           <div className="bg-[#F5FFFA] rounded-xl px-8 py-12 md:w-[90%] mx-auto text-[12.5px]">
             <h2 className="md:text-2xl text-lg font-semibold md:font-normal">
-              Creation of Rental Agreements in Bangalore
+              Creation of Rental Agreements in Kathmandu
             </h2>
             <p>
-              Otherwise known for its traffic, Bangalore is home to many
+              Otherwise known for its traffic, Kathmandu is home to many
               startups and IT companies. As a result, the demand for commercial
               and residential space is high. Seeking job opportunities, a number
-              of people travel to Bangalore and become a part of it. Though
+              of people travel to Kathmandu and become a part of it. Though
               finding a job is relatively easy, the tough part is to get through
               the rental processing, especially understanding the nuances of a
-              registered rental agreement in Bangalore, including understanding
+              registered rental agreement in Kathmandu, including understanding
               the rent agreement stamp paper value. <br />
-              Just when you put the term ‘rental agreement in Bangalore’ across,
+              Just when you put the term ‘rental agreement in Kathmandu’ across,
               individuals see it as a task of great hassle. However, it is
               necessary for you to get proper information about the online
               registration of the rental agreement and its processing in
-              Bangalore, including the stamp paper value. Below we address some
+              Kathmandu, including the stamp paper value. Below we address some
               of the frequently asked questions that will make it easier for you
               to get through the process.
             </p>
             <h2 className="md:text-2xl text-lg font-semibold md:font-normal">
-              What are the Different Types of Rental Agreements in Bangalore?
+              What are the Different Types of Rental Agreements in Kathmandu?
             </h2>
             <p>
               A number of landlords make the processing of the rental agreement
@@ -760,10 +765,10 @@ const RentalAgreement = () => {
               Lease Agreement
             </p>
             <p>
-              An Online Bangalore rental agreement offers the right to tenancy
+              An Online Kathmandu rental agreement offers the right to tenancy
               to the tenant for a short period of time (typically 11 months).
               Once the duration ends, the period can be automatically renewed at
-              latest rental agreement charges in Bangalore. The cycle continues
+              latest rental agreement charges in Kathmandu. The cycle continues
               until the landlord or the tenant wishes to end it with mutual
               consent.
             </p>
@@ -782,7 +787,7 @@ const RentalAgreement = () => {
             <p>
               As the time duration of the tenancy is longer, the deposit is
               high, which is paid when the tenant vacates the property. Unlike
-              the Bangalore rental agreement rules, the lease agreement is
+              the Kathmandu rental agreement rules, the lease agreement is
               terminated after the lease expires. This means that the contract
               does not renew on its own. Both the tenant and the owner needs to
               go through the entire process to renew the agreement.
@@ -799,7 +804,7 @@ const RentalAgreement = () => {
               deposit from the tenant before he moves in. The security deposit
               should not be more than a total of two or three month’s rent.{" "}
               <br />
-              As per the Bangalore rental agreement rules, In case a tenant
+              As per the Kathmandu rental agreement rules, In case a tenant
               damages the property and absconds it, the owner can use the
               security deposit to cover the expense on the repair works.
               However, when the tenant is in the flat, and some kind of
@@ -815,7 +820,7 @@ const RentalAgreement = () => {
             </p>
             <h2 className="md:text-2xl text-lg font-semibold md:font-normal">
               What are some of the Pointers to Discuss with your Landlord before
-              the Creation of a Rental Agreement in Bangalore?
+              the Creation of a Rental Agreement in Kathmandu?
             </h2>
             <p>
               Having the critical issues resolved before moving in and taking
@@ -844,7 +849,7 @@ const RentalAgreement = () => {
               months. Hence, you can discuss the same and come to a conclusion.{" "}
               <br />
               At this point, you should also discuss the scenario when the
-              rental agreement Bangalore expires and the tenant continues to
+              rental agreement Kathmandu expires and the tenant continues to
               stay till he finds a new place.
             </p>
             <h2 className="md:text-2xl text-lg font-semibold md:font-normal">
@@ -887,7 +892,7 @@ const RentalAgreement = () => {
               discuss if at all it apply to you.
             </p>
             <h2 className="md:text-2xl text-lg font-semibold md:font-normal">
-              What are the Stamp Duty and Registration Charges in Bangalore for
+              What are the Stamp Duty and Registration Charges in Kathmandu for
               Tenancy Agreement?
             </h2>
             <p>
@@ -908,7 +913,7 @@ const RentalAgreement = () => {
               Besides the stamp duty, the registration of the rental agreement
               registration is 1 % of the annual agreement + deposit. A number of
               people do not take the stamp duty and registration seriously.
-              However, Bangalore rental agreement rules enables numerous rights
+              However, Kathmandu rental agreement rules enables numerous rights
               for the tenants and landlords and can save them from any type of
               fraud from the other party.
             </p>
@@ -929,7 +934,7 @@ const RentalAgreement = () => {
               Every aspect has to be written in the agreement, no matter how
               unimportant it may sound. <br />
               The agreement has to be created as a draft first to check for any
-              edits and then printed on rental agreement Bangalore stamp paper
+              edits and then printed on rental agreement Kathmandu stamp paper
               value of a minimum of Rs. 100.
             </p>
             <p>
@@ -950,7 +955,7 @@ const RentalAgreement = () => {
               original identity proofs and their biometric impressions.
               <br />
               The owner must give the tenant a copy of the rental agreement in
-              Bangalore to present it as legal address proof during the lock-in
+              Kathmandu to present it as legal address proof during the lock-in
               period. If the tenant moves out of the property during the lock-in
               period, the owner may decide whether or not to release the
               security deposit paid by the tenant.
@@ -959,7 +964,7 @@ const RentalAgreement = () => {
               These were some of the important aspects to consider before
               renting a property. If you wish to get through the online
               registration for the rent agreement process, you can simply log in
-              to the NESTATE portal and get doorstep delivery of your bangalore
+              to the NESTATE portal and get doorstep delivery of your Kathmandu
               rent agreement template.
             </p>
           </div>

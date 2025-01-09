@@ -31,7 +31,7 @@ const Services = ({ title }) => {
   return (
     <div className="p-5 mb-1.5">
       <div className="font-semibold text-2xl text-center mb-4">{title}</div>
-      <div className="flex items-center gap-4 px-2 overflow-x-scroll no-scrollbar md:justify-center">
+      <div className="flex items-center gap-4 px-2 overflow-x-scroll no-scrollbar xl:justify-center">
         {service.map((item) => (
           <div
             className="flex flex-col items-center gap-2 w-24 min-w-20 md:min-w-36"
